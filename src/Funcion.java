@@ -6,7 +6,7 @@ public class Funcion {
         String nombreProducto;
         double precioProducto;
         int cantidad;
-        final double IMPUESTO = 0.21;   // 21%
+        final double IMPUESTO = 0.21;
         double dineroCliente;
 
         Scanner sc = new Scanner(System.in);
