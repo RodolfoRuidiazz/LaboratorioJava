@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Funcion {
     public static void main(String[] args) {
 
-        // 1. Definición de datos
         String nombreProducto;
         double precioProducto;
         int cantidad;
@@ -12,7 +11,6 @@ public class Funcion {
 
         Scanner sc = new Scanner(System.in);
 
-        // 2. Entrada de datos
         System.out.print("Ingrese el nombre del producto: ");
         nombreProducto = sc.nextLine();
 
@@ -25,17 +23,13 @@ public class Funcion {
         System.out.print("Ingrese el dinero que trae el cliente: ");
         dineroCliente = sc.nextDouble();
 
-        // 3. Lógica de negocio
         double subtotal = precioProducto * cantidad;
         double totalAPagar = subtotal + (subtotal * IMPUESTO);
 
-        // Reto de casting
         int totalRedondeado = (int) totalAPagar;
 
-        // 4. Validación
         boolean puedeComprar = dineroCliente >= totalAPagar;
 
-        // 5. Salida: imprimir ticket
         System.out.println("\n===== TICKET DE COMPRA =====");
         System.out.println("Producto: " + nombreProducto);
         System.out.println("Precio unitario: $" + precioProducto);
